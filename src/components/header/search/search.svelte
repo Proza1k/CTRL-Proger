@@ -1,5 +1,5 @@
 <script>
-  let name = "Search";
+  let name = "Search"
 </script>
 
 <style>
@@ -12,5 +12,5 @@
 </style>
 
 <div class="search">
-  <img class="search" alt={name} src="assets/img/search.png" />
+  <img class="search" alt={name} src="demo/assets/img/search.png" />
 </div>
