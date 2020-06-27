@@ -12,7 +12,7 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'public/build/bundle.js'
+		file: process.env.DEMO === "true" ? "demo/demo.js" : "public/build/bundle.js",
 	},
 	plugins: [
 		svelte({
@@ -21,7 +21,9 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file - better for performance
 			css: css => {
-				css.write('public/build/bundle.css');
+				css.write(process.env.DEMO === 'true'
+          ? 'demo/demo.css'
+          : 'public/build/bundle.css');
 			}
 		}),
 
